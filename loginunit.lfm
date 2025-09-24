@@ -1,0 +1,116 @@
+object frmLogin: TfrmLogin
+  Cursor = crDrag
+  Left = 298
+  Height = 300
+  Top = 31
+  Width = 400
+  Caption = 'Login'
+  ClientHeight = 300
+  ClientWidth = 400
+  Color = 5587466
+  Font.Color = 16775366
+  Font.Height = -13
+  Font.Name = 'Sans'
+  Font.Style = [fsBold]
+  Position = poScreenCenter
+  object lblTitle: TLabel
+    Left = 0
+    Height = 27
+    Top = 0
+    Width = 400
+    Align = alTop
+    Alignment = taCenter
+    Caption = 'AlbumWiki Login'
+    Color = 5587466
+    Font.Color = 16775366
+    Font.Height = -19
+    Font.Name = 'Noto Serif Devanagari'
+    ParentColor = False
+    ParentFont = False
+    OnClick = lblTitleClick
+  end
+  object lblUsername: TLabel
+    Left = 104
+    Height = 18
+    Top = 64
+    Width = 72
+    Caption = 'Username:'
+    Font.Color = 16775366
+    Font.Height = -13
+    Font.Name = 'Sans'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object lblPassword: TLabel
+    Left = 104
+    Height = 18
+    Top = 136
+    Width = 65
+    Caption = 'Password:'
+  end
+  object edtUsername: TEdit
+    Left = 104
+    Height = 30
+    Top = 88
+    Width = 200
+    Font.Color = 5587466
+    Font.Height = -13
+    Font.Name = 'Sans'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 0
+  end
+  object edtPassword: TEdit
+    Left = 104
+    Height = 30
+    Top = 160
+    Width = 200
+    Font.Color = 5587466
+    Font.Height = -13
+    Font.Name = 'Sans'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 1
+  end
+  object btnLogin: TButton
+    Left = 168
+    Height = 25
+    Top = 208
+    Width = 75
+    Caption = 'Login'
+    Font.Color = 5587466
+    Font.Height = -13
+    Font.Name = 'Sans'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 2
+  end
+  object btnSignup: TButton
+    Left = 168
+    Height = 25
+    Top = 248
+    Width = 75
+    Caption = 'Signup'
+    Color = 8876612
+    Font.Color = 1663738
+    Font.Height = -13
+    Font.Name = 'Sans'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 3
+  end
+  object IBConnection1: TIBConnection
+    Connected = False
+    LoginPrompt = False
+    KeepConnection = False
+    CheckTransactionParams = False
+    UseConnectionCharSetIfNone = False
+    Left = 360
+    Top = 216
+  end
+  object SQLTransaction1: TSQLTransaction
+    Active = False
+    Left = 360
+    Top = 264
+  end
+end
