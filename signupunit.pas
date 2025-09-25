@@ -31,7 +31,7 @@ type
   end;
 
 var
-  frmSignup: frmSignupss;
+  frmSignup: TfrmSignup;
 
 implementation
 

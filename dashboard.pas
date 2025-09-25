@@ -6,7 +6,7 @@ interface
 
 uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, ExtCtrls, StdCtrls,
-  Grids;
+  Grids, ComCtrls;
 
 type
 
@@ -18,9 +18,15 @@ type
     btnNavSettings: TButton;
     btnExit: TButton;
     btnSearch: TButton;
+    btnPlay: TButton;
+    btnPause: TButton;
+    btnStop: TButton;
+    btnBack: TButton;
+    btnNext: TButton;
     ComboBox1: TComboBox;
     edtSearch: TEdit;
     imgProfile: TImage;
+    lblElapsed: TLabel;
     lblMusicPlayer: TLabel;
     lblHeader: TLabel;
     lblAppInfo: TLabel;
@@ -29,6 +35,7 @@ type
     pnlMain: TPanel;
     pnlSidebar: TPanel;
     grdResults: TStringGrid;
+    pbTrack: TProgressBar;
   private
 
   public

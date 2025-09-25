@@ -9,8 +9,8 @@ uses
   {$IFDEF HASAMIGA}
   athreads,
   {$ENDIF}
-  Interfaces,
-  Forms, tachartlazaruspkg, LoginUnit, SignupUnit, Dashboard;
+  Interfaces, Forms, tachartlazaruspkg, LoginUnit, SignupUnit, Dashboard,
+  SettingsUnit, AlbumUnit, AlbumEditUnit;
 
 {$R *.res}
 
@@ -23,7 +23,10 @@ begin
   Application.Initialize;
   Application.CreateForm(TfrmLogin, frmLogin);
   Application.CreateForm(TfrmSignup, frmSignup);
+  Application.CreateForm(TfrmSettings, frmSettings);
   Application.CreateForm(TfrmDashboard, frmDashboard);
+  Application.CreateForm(TfrmAlbum, frmAlbum);
+  Application.CreateForm(TfrmAlbumEdit, frmAlbumEdit);
   Application.Run;
 end.
 

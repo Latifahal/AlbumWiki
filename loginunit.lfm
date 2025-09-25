@@ -13,6 +13,7 @@ object frmLogin: TfrmLogin
   Font.Name = 'Sans'
   Font.Style = [fsBold]
   Position = poScreenCenter
+  LCLVersion = '4.0.0.4'
   object lblTitle: TLabel
     Left = 0
     Height = 27
@@ -27,7 +28,6 @@ object frmLogin: TfrmLogin
     Font.Name = 'Noto Serif Devanagari'
     ParentColor = False
     ParentFont = False
-    OnClick = lblTitleClick
   end
   object lblUsername: TLabel
     Left = 104

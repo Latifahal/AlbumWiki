@@ -63,6 +63,30 @@
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="Dashboard"/>
       </Unit>
+      <Unit>
+        <Filename Value="frmsettings.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Form1"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="SettingsUnit"/>
+      </Unit>
+      <Unit>
+        <Filename Value="albumunit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmAlbum"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="AlbumUnit"/>
+      </Unit>
+      <Unit>
+        <Filename Value="albumeditunit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmAlbumEdit"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="AlbumEditUnit"/>
+      </Unit>
     </Units>
   </ProjectOptions>
   <CompilerOptions>
@@ -95,6 +119,9 @@
       </Item>
       <Item>
         <Name Value="EFOpenError"/>
+      </Item>
+      <Item>
+        <Name Value="EReadError"/>
       </Item>
     </Exceptions>
   </Debugging>

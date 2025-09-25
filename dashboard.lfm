@@ -5,8 +5,9 @@ object frmDashboard: TfrmDashboard
   Width = 783
   ClientHeight = 567
   ClientWidth = 783
-  Color = 5587466
+  Color = clBlack
   Font.Color = clBlack
+  LCLVersion = '4.0.0.4'
   object pnlSidebar: TPanel
     Left = 0
     Height = 567
@@ -15,18 +16,27 @@ object frmDashboard: TfrmDashboard
     Align = alLeft
     ClientHeight = 567
     ClientWidth = 183
+    Color = clBlack
+    Font.Color = clBlack
+    Font.Height = -13
+    Font.Name = 'Sans'
+    Font.Style = [fsBold]
     ParentBackground = False
+    ParentColor = False
+    ParentFont = False
     TabOrder = 0
     object lblUserName: TLabel
       Left = 24
       Height = 18
       Top = 154
-      Width = 118
-      Caption = 'User: <username>'
-      Font.Color = clAqua
+      Width = 107
+      Caption = 'User: UserName'
+      Color = 11525120
+      Font.Color = 15852543
       Font.Height = -13
       Font.Name = 'Sans'
       Font.Style = [fsBold]
+      ParentColor = False
       ParentFont = False
     end
     object btnNavDashboard: TButton
@@ -35,6 +45,11 @@ object frmDashboard: TfrmDashboard
       Top = 248
       Width = 114
       Caption = 'Dashboard'
+      Font.Color = clBlack
+      Font.Height = -13
+      Font.Name = 'Sans'
+      Font.Style = [fsBold]
+      ParentFont = False
       TabOrder = 0
     end
     object btnNavAlbums: TButton
@@ -43,6 +58,11 @@ object frmDashboard: TfrmDashboard
       Top = 286
       Width = 114
       Caption = 'Albums'
+      Font.Color = clBlack
+      Font.Height = -13
+      Font.Name = 'Sans'
+      Font.Style = [fsBold]
+      ParentFont = False
       TabOrder = 1
     end
     object btnNavSettings: TButton
@@ -51,6 +71,11 @@ object frmDashboard: TfrmDashboard
       Top = 328
       Width = 112
       Caption = 'Settings'
+      Font.Color = clBlack
+      Font.Height = -13
+      Font.Name = 'Sans'
+      Font.Style = [fsBold]
+      ParentFont = False
       TabOrder = 2
     end
     object imgProfile: TImage
@@ -1595,9 +1620,9 @@ object frmDashboard: TfrmDashboard
       Left = 24
       Height = 17
       Top = 174
-      Width = 73
-      Caption = 'App Info Text'
-      Font.Color = 13553213
+      Width = 43
+      Caption = 'Info.......'
+      Font.Color = 16383167
       Font.Height = -12
       Font.Name = 'Sans'
       ParentFont = False
@@ -1605,22 +1630,29 @@ object frmDashboard: TfrmDashboard
     object btnExit: TButton
       Left = 57
       Height = 25
-      Top = 528
+      Top = 512
       Width = 114
       Caption = 'Exit'
+      Font.Color = 1316066
+      Font.Height = -13
+      Font.Name = 'Sans'
+      Font.Style = [fsBold]
+      ParentFont = False
       TabOrder = 3
     end
   end
   object pnlMain: TPanel
-    Left = 192
-    Height = 384
-    Top = 8
-    Width = 584
-    ClientHeight = 384
-    ClientWidth = 584
-    Color = 11135214
+    Left = 184
+    Height = 392
+    Top = 0
+    Width = 592
+    ClientHeight = 392
+    ClientWidth = 592
+    Color = 3158064
+    Font.Color = 11702151
     ParentBackground = False
     ParentColor = False
+    ParentFont = False
     TabOrder = 1
     UseDockManager = False
     object edtSearch: TEdit
@@ -1640,7 +1672,8 @@ object frmDashboard: TfrmDashboard
       Width = 100
       ItemHeight = 0
       TabOrder = 1
-      Text = 'ComboBox1'
+      Text = '....'
+      TextHint = 'song, artist, genre..'
     end
     object grdResults: TStringGrid
       Left = 26
@@ -1650,34 +1683,41 @@ object frmDashboard: TfrmDashboard
       ColCount = 4
       Columns = <      
         item
-          Color = 15859711
-          Font.Color = clNavy
+          Color = clWhite
+          Font.Color = clWhite
           Font.Name = 'ID'
-          Title.Color = 12105786
+          Title.Color = clWhite
+          Title.Font.Color = clWhite
+          Title.Font.Height = 200
           Title.Caption = 'Title'
         end      
         item
-          Color = 11135214
+          Color = clWhite
           Font.Color = clWhite
-          Title.Color = 12105786
+          Title.Color = clWhite
+          Title.Font.Color = clWhite
+          Title.Font.Height = 200
           Title.Caption = 'Title'
         end      
         item
-          Color = 11135214
+          Color = clWhite
           Font.Color = clWhite
-          Title.Color = 12105786
+          Title.Color = clWhite
+          Title.Font.Color = clWhite
+          Title.Font.Height = 200
           Title.Caption = 'Title'
         end      
         item
-          Color = 11135214
-          Font.Color = clFuchsia
-          Title.Color = 12105786
+          Color = clWhite
+          Font.Color = clWhite
+          Title.Color = clWhite
+          Title.Font.Color = clWhite
+          Title.Font.Height = 200
           Title.Caption = 'Title'
         end>
       DefaultColWidth = 135
       DefaultRowHeight = 25
       FixedCols = 0
-      GridLineColor = 9227988
       GridLineStyle = psDot
       Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRangeSelect, goEditing, goSmoothScroll]
       RowCount = 9
@@ -1691,7 +1731,7 @@ object frmDashboard: TfrmDashboard
       Top = 20
       Width = 288
       Caption = 'Dashboard'
-      Font.Color = 5587466
+      Font.Color = 16383167
       Font.Height = -53
       Font.Name = 'Sans'
       Font.Style = [fsBold]
@@ -1700,11 +1740,11 @@ object frmDashboard: TfrmDashboard
     object btnSearch: TButton
       Left = 488
       Height = 25
-      Top = 100
+      Top = 104
       Width = 80
       Caption = 'Search'
-      Color = 34815
-      Font.Color = 34815
+      Color = clWhite
+      Font.Color = clBlack
       Font.Height = -13
       Font.Name = 'Sans'
       Font.Style = [fsBold]
@@ -1713,28 +1753,104 @@ object frmDashboard: TfrmDashboard
     end
   end
   object pnlMusicPlayer: TPanel
-    Left = 192
+    Left = 184
     Height = 168
     Top = 392
-    Width = 584
+    Width = 592
     ClientHeight = 168
-    ClientWidth = 584
-    Color = 5549730
+    ClientWidth = 592
+    Color = 3158064
+    Font.Color = clBlack
     ParentBackground = False
     ParentColor = False
+    ParentFont = False
     TabOrder = 2
     object lblMusicPlayer: TLabel
       Left = 26
       Height = 41
-      Top = 8
+      Top = 24
       Width = 184
       Caption = 'Music Player'
       Color = clWhite
-      Font.Color = 5587466
+      Font.Color = 16383167
       Font.Height = -29
       Font.Name = 'Sans'
       Font.Style = [fsBold]
       ParentColor = False
+      ParentFont = False
+    end
+    object btnPlay: TButton
+      Left = 32
+      Height = 25
+      Top = 120
+      Width = 75
+      Caption = '▶'
+      Color = clGray
+      Font.Color = 8356167
+      ParentFont = False
+      TabOrder = 0
+    end
+    object btnPause: TButton
+      Left = 104
+      Height = 25
+      Top = 120
+      Width = 75
+      Caption = '⏸'
+      TabOrder = 1
+    end
+    object btnStop: TButton
+      Left = 176
+      Height = 25
+      Top = 120
+      Width = 75
+      Caption = '■'
+      Font.Color = 1316066
+      ParentFont = False
+      TabOrder = 2
+    end
+    object btnBack: TButton
+      Left = 248
+      Height = 25
+      Top = 120
+      Width = 75
+      Caption = '⏮'
+      Font.Color = clBlack
+      Font.Height = -13
+      Font.Name = 'Sans'
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 3
+    end
+    object btnNext: TButton
+      Left = 320
+      Height = 25
+      Top = 120
+      Width = 75
+      Caption = '⏭'
+      Font.Color = clBlack
+      Font.Height = -13
+      Font.Name = 'Sans'
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 4
+    end
+    object pbTrack: TProgressBar
+      Left = 32
+      Height = 18
+      Top = 90
+      Width = 363
+      TabOrder = 5
+    end
+    object lblElapsed: TLabel
+      Left = 408
+      Height = 18
+      Top = 90
+      Width = 32
+      Caption = '00:00'
+      Font.Color = 15852543
+      Font.Height = -13
+      Font.Name = 'Sans'
+      Font.Style = [fsBold]
       ParentFont = False
     end
   end
