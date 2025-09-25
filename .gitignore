@@ -1,3 +1,31 @@
+# Lazarus Free Pascal build files
+*.ppu
+*.o
+*.or
+*.a
+*.so
+*.dcu
+*.exe
+*.dll
+*.dylib
+
+# Lazarus generated unit directories
+lib/
+backup/
+tmp/
+bin/
+
+# Lazarus project session and state files
+*.lps
+*.lpi~
+*.lpr~
+*.pas~
+*.pp~
+*.bak
+
+# OS-specific
+.DS_Store
+Thumbs.db
 # Lazarus / Free Pascal build files
 lib/
 backup/
