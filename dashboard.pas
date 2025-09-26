@@ -14,31 +14,31 @@ type
 
   TfrmDashboard = class(TForm)
     btnNavDashboard: TButton;
-    btnNavAlbums: TButton;
-    btnNavSettings: TButton;
-    btnExit: TButton;
-    btnSearch: TButton;
-    btnPlay: TButton;
-    btnPause: TButton;
-    btnStop: TButton;
-    btnBack: TButton;
-    btnNext: TButton;
-    ComboBox1: TComboBox;
-    edtSearch: TEdit;
-    imgProfile: TImage;
-    lblElapsed: TLabel;
-    lblMusicPlayer: TLabel;
-    lblHeader: TLabel;
-    lblAppInfo: TLabel;
-    lblUserName: TLabel;
-    pnlMusicPlayer: TPanel;
-    pnlMain: TPanel;
-    pnlSidebar: TPanel;
-    grdResults: TStringGrid;
-    pbTrack: TProgressBar;
-    procedure FormShow(Sender: TObject);
+    btnNavAlbums:    TButton;
+    btnNavSettings:  TButton;
+    btnExit:         TButton;
+    btnSearch:       TButton;
+    btnPlay:         TButton;
+    btnPause:        TButton;
+    btnStop:         TButton;
+    btnBack:         TButton;
+    btnNext:         TButton;
+    ComboBox1:       TComboBox;
+    edtSearch:       TEdit;
+    imgProfile:      TImage;
+    lblElapsed:      TLabel;
+    lblMusicPlayer:  TLabel;
+    lblHeader:       TLabel;
+    lblAppInfo:      TLabel;
+    lblUserName:     TLabel;
+    pnlMusicPlayer:  TPanel;
+    pnlMain:         TPanel;
+    pnlSidebar:      TPanel;
+    grdResults:      TStringGrid;
+    pbTrack:         TProgressBar;
+    procedure FormShow(Sender:       TObject);
     procedure btnSearchClick(Sender: TObject);
-    procedure btnExitClick(Sender: TObject);
+    procedure btnExitClick(Sender:   TObject);
   private
     procedure LoadAlbums(const Filter: string = '');
   public
@@ -58,8 +58,8 @@ implementation
 procedure TfrmDashboard.FormShow(Sender: TObject);
 begin
   // initialize grid headers
-  grdResults.RowCount := 1; // header row only
-  grdResults.ColCount := 3;
+  grdResults.RowCount    := 1; // header row only
+  grdResults.ColCount    := 3;
   grdResults.Cells[0, 0] := 'ID';
   grdResults.Cells[1, 0] := 'Title';
   grdResults.Cells[2, 0] := 'Artist';
@@ -85,10 +85,10 @@ var
 begin
   Query := TSQLQuery.Create(nil);
   try
-    Query.DataBase := IBConn;
+    Query.DataBase    := IBConn;
     Query.Transaction := SQLTrans;
 
-    Query.SQL.Text := 'SELECT ID, TITLE, ARTIST FROM ALBUMS';
+    Query.SQL.Text    := 'SELECT ID, TITLE, ARTIST FROM ALBUMS';
     if Filter <> '' then
       Query.SQL.Add('WHERE TITLE LIKE :P OR ARTIST LIKE :P');
     Query.SQL.Add('ORDER BY TITLE');

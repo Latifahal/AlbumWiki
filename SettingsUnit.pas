@@ -9,11 +9,11 @@ uses
 
 type
   TfrmSettings = class(TForm)
-    lblTitle: TLabel;
-    PanelTitle: TPanel;
+    lblTitle:         TLabel;
+    PanelTitle:       TPanel;
     btnDeleteAccount: TButton;
-    btnChangePass: TButton;
-    btnBack: TButton;
+    btnChangePass:    TButton;
+    btnBack:          TButton;
   private
     { private declarations }
   public

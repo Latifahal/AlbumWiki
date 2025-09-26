@@ -69,11 +69,11 @@ end;
 
 procedure TresultGridCont.btnResetFilters1Click(Sender: TObject);
 begin
-  cmbTitle.Text := '';
+  cmbTitle.Text  := '';
   cmbArtist.Text := '';
-  cmbGenre.Text := '';
-  cmbYear.Text := '';
-  Edit1.Text := '';
+  cmbGenre.Text  := '';
+  cmbYear.Text   := '';
+  Edit1.Text     := '';
   LoadResults; // reload everything
 end;
 
@@ -97,7 +97,7 @@ begin
   Query := TSQLQuery.Create(nil);
   WhereClause := TStringList.Create;
   try
-    Query.DataBase := IBConn;
+    Query.DataBase    := IBConn;
     Query.Transaction := SQLTrans;
 
     Query.SQL.Text := 'SELECT ID, TITLE, ARTIST, YEAR FROM ALBUMS';
@@ -121,13 +121,13 @@ begin
 
     // Bind params
     if cmbTitle.Text <> '' then
-      Query.Params.ParamByName('TITLE').AsString := '%' + cmbTitle.Text + '%';
+      Query.Params.ParamByName('TITLE').AsString  := '%' + cmbTitle.Text  + '%';
     if cmbArtist.Text <> '' then
       Query.Params.ParamByName('ARTIST').AsString := '%' + cmbArtist.Text + '%';
     if cmbGenre.Text <> '' then
-      Query.Params.ParamByName('GENRE').AsString := '%' + cmbGenre.Text + '%';
+      Query.Params.ParamByName('GENRE').AsString  := '%' + cmbGenre.Text  + '%';
     if cmbYear.Text <> '' then
-      Query.Params.ParamByName('YEAR').AsString := cmbYear.Text;
+      Query.Params.ParamByName('YEAR').AsString   := cmbYear.Text;
     if Edit1.Text <> '' then
       Query.Params.ParamByName('SEARCH').AsString := '%' + Edit1.Text + '%';
 

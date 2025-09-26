@@ -13,14 +13,14 @@ type
   { TfrmAlbum }
 
   TfrmAlbum = class(TForm)
-    btnBack: TBitBtn;
-    btnEdit: TButton;
-    btnDelete: TButton;
-    imgCover: TImage;
-    lblAlbumInfo: TLabel;
-    lstTracks: TListBox;
-    lstCategories: TListBox;
-    Panel1: TPanel;
+    btnBack:         TBitBtn;
+    btnEdit:         TButton;
+    btnDelete:       TButton;
+    imgCover:        TImage;
+    lblAlbumInfo:    TLabel;
+    lstTracks:       TListBox;
+    lstCategories:   TListBox;
+    Panel1:          TPanel;
     pnlAlbumDetails: TPanel;
   private
 

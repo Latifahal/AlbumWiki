@@ -11,16 +11,16 @@ uses
 type
   { TfrmLogin }
   TfrmLogin = class(TForm)
-    btnLogin: TButton;
-    btnSignup: TButton;
+    btnLogin:    TButton;
+    btnSignup:   TButton;
     edtUsername: TEdit;
     edtPassword: TEdit;
-    lblTitle: TLabel;
+    lblTitle:    TLabel;
     lblUsername: TLabel;
     lblPassword: TLabel;
     procedure btnLoginClick(Sender: TObject);
-    procedure FormCreate(Sender: TObject);
-    procedure frmSignup(Sender: TObject);
+    procedure FormCreate(Sender:    TObject);
+    procedure frmSignup(Sender:     TObject);
   private
     function TryLogin(const AUser, APass: string): Boolean;
   public
@@ -33,12 +33,12 @@ implementation
 
 {$R *.lfm}
 
-procedure TfrmLogin.FormCreate(Sender: TObject);
+procedure TfrmLogin.FormCreate(Sender:    TObject);
 begin
   InitDatabase; // DBModuleUnit takes care of IBConn + SQLTrans
 end;
 
-procedure TfrmLogin.frmSignup(Sender: TObject);
+procedure TfrmLogin.frmSignup(Sender:     TObject);
 begin
   ShowMessage('clicked!');
 end;

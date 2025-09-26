@@ -14,14 +14,14 @@ type
 
   TfrmSignup = class(TForm)
     btnCreateAccount: TButton;
-    btnCancel: TButton;
-    edtUsername: TEdit;
-    edtPassword: TEdit;
-    lblTitle: TLabel;
-    lblUsername: TLabel;
-    lblPassword: TLabel;
+    btnCancel:        TButton;
+    edtUsername:      TEdit;
+    edtPassword:      TEdit;
+    lblTitle:         TLabel;
+    lblUsername:      TLabel;
+    lblPassword:      TLabel;
     procedure btnCreateAccountClick(Sender: TObject);
-    procedure btnCancelClick(Sender: TObject);
+    procedure btnCancelClick(Sender:        TObject);
   private
     function UserExists(const AUser: string): Boolean;
   public
@@ -65,7 +65,7 @@ begin
 
   Query := TSQLQuery.Create(nil);
   try
-    Query.DataBase := IBConn;
+    Query.DataBase    := IBConn;
     Query.Transaction := SQLTrans;
 
     Query.SQL.Text :=
@@ -96,12 +96,12 @@ var
   Query: TSQLQuery;
 begin
   Result := False;
-  Query := TSQLQuery.Create(nil);
+  Query  := TSQLQuery.Create(nil);
   try
-    Query.DataBase := IBConn;
+    Query.DataBase    := IBConn;
     Query.Transaction := SQLTrans;
 
-    Query.SQL.Text := 'SELECT COUNT(*) AS CNT FROM USERS WHERE USERNAME = :U';
+    Query.SQL.Text    := 'SELECT COUNT(*) AS CNT FROM USERS WHERE USERNAME = :U';
     Query.Params.ParamByName('U').AsString := AUser;
     Query.Open;
 
@@ -112,5 +112,4 @@ begin
     Query.Free;
   end;
 end;
-
 end.

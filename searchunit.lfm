@@ -7,6 +7,7 @@ object resultGridCont: TresultGridCont
   ClientWidth = 781
   Color = 4200215
   UseDockManager = True
+  LCLVersion = '4.0.0.4'
   Scaled = False
   object pnlSearch: TPanel
     Left = 0
