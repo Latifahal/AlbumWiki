@@ -12,6 +12,7 @@ type
   { TfrmAlbumEdit }
 
   TfrmAlbumEdit = class(TForm)
+    Panel1: Tpanel;
     btnCancel: TButton;
     btnSave: TButton;
     edtArtist: TEdit;

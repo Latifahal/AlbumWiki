@@ -1,0 +1,209 @@
+object resultGridCont: TresultGridCont
+  Left = 531
+  Height = 534
+  Top = 31
+  Width = 781
+  ClientHeight = 534
+  ClientWidth = 781
+  Color = 4200215
+  UseDockManager = True
+  Scaled = False
+  object pnlSearch: TPanel
+    Left = 0
+    Height = 50
+    Top = 0
+    Width = 781
+    Align = alTop
+    BevelColor = clWhite
+    ClientHeight = 50
+    ClientWidth = 781
+    Color = 7356999
+    Font.Height = -21
+    Font.Name = 'Sans'
+    Font.Style = [fsBold]
+    ParentBackground = False
+    ParentColor = False
+    ParentFont = False
+    TabOrder = 0
+    object btnBack: TButton
+      Left = 32
+      Height = 28
+      Top = 10
+      Width = 75
+      Caption = '< Back'
+      Color = 4200215
+      Font.Color = 4200215
+      Font.Height = -13
+      Font.Name = 'Sans'
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 0
+    end
+    object Edit1: TEdit
+      Left = 264
+      Height = 30
+      Top = 8
+      Width = 422
+      Color = clSilver
+      Font.Color = 4200215
+      Font.Height = -13
+      Font.Name = 'Sans'
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 1
+      Text = '...'
+    end
+    object btnSearchAdvanced: TButton
+      Left = 686
+      Height = 30
+      Top = 8
+      Width = 66
+      Caption = 'Search'
+      Font.Color = 4200215
+      Font.Height = -13
+      Font.Name = 'Sans'
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 2
+    end
+  end
+  object Panel1: TPanel
+    Left = 32
+    Height = 440
+    Top = 72
+    Width = 200
+    ClientHeight = 440
+    ClientWidth = 200
+    Color = 7356999
+    Font.Height = -17
+    Font.Name = 'Sans'
+    Font.Style = [fsBold]
+    ParentBackground = False
+    ParentColor = False
+    ParentFont = False
+    TabOrder = 1
+    object lblFilter: TLabel
+      Left = 16
+      Height = 27
+      Top = 32
+      Width = 59
+      Caption = 'Filters'
+      Font.Color = 10078208
+      Font.Height = -19
+      Font.Name = 'Sans'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object cmbGenre: TComboBox
+      Left = 16
+      Height = 30
+      Top = 144
+      Width = 168
+      Color = clSilver
+      Font.Color = 4200215
+      Font.Height = -13
+      Font.Name = 'Sans'
+      ItemHeight = 0
+      ParentFont = False
+      TabOrder = 0
+      Text = 'Genre'
+    end
+    object cmbYear: TComboBox
+      Left = 16
+      Height = 30
+      Top = 256
+      Width = 168
+      Color = clSilver
+      Font.Color = 4200215
+      Font.Height = -13
+      Font.Name = 'Sans'
+      ItemHeight = 0
+      ParentFont = False
+      TabOrder = 1
+      Text = 'Year'
+    end
+    object cmbArtist: TComboBox
+      Left = 16
+      Height = 30
+      Top = 200
+      Width = 168
+      Color = clSilver
+      Font.Color = 4200215
+      Font.Height = -13
+      Font.Name = 'Sans'
+      ItemHeight = 0
+      ParentFont = False
+      TabOrder = 2
+      Text = 'Artist'
+    end
+    object btnApplyFilters: TButton
+      Left = 40
+      Height = 26
+      Top = 336
+      Width = 120
+      Caption = 'Apply'
+      Font.Color = 4200215
+      Font.Height = -13
+      Font.Name = 'Sans'
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 3
+    end
+    object btnResetFilters1: TButton
+      Left = 40
+      Height = 26
+      Top = 368
+      Width = 120
+      Caption = 'Reset'
+      Font.Color = 1250243
+      Font.Height = -13
+      Font.Name = 'Sans'
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 4
+    end
+    object cmbTitle: TComboBox
+      Left = 16
+      Height = 30
+      Top = 88
+      Width = 168
+      Color = clSilver
+      Font.Color = 4200215
+      Font.Height = -13
+      Font.Name = 'Sans'
+      ItemHeight = 0
+      ParentFont = False
+      TabOrder = 5
+      Text = 'Title'
+    end
+  end
+  object StringGrid1: TStringGrid
+    Left = 264
+    Height = 440
+    Top = 72
+    Width = 488
+    AlternateColor = clWhite
+    Color = 4200215
+    Columns = <    
+      item
+        DropDownRows = 20
+        Font.Color = 4200215
+        Title.Caption = 'Title'
+        Width = 100
+      end    
+      item
+        Title.Caption = 'Title'
+        Width = 100
+      end    
+      item
+        Title.Caption = 'Title'
+        Width = 100
+      end    
+      item
+        Title.Caption = 'Title'
+        Width = 100
+      end>
+    RowCount = 17
+    TabOrder = 2
+  end
+end

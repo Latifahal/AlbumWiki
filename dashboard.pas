@@ -25,6 +25,7 @@ type
     btnNext: TButton;
     ComboBox1: TComboBox;
     edtSearch: TEdit;
+
     imgProfile: TImage;
     lblElapsed: TLabel;
     lblMusicPlayer: TLabel;

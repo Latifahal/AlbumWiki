@@ -10,7 +10,7 @@ uses
   athreads,
   {$ENDIF}
   Interfaces, Forms, tachartlazaruspkg, LoginUnit, SignupUnit, Dashboard,
-  SettingsUnit, AlbumUnit, AlbumEditUnit;
+  SettingsUnit, AlbumUnit, AlbumEditUnit, SearchUnit;
 
 {$R *.res}
 
@@ -27,6 +27,7 @@ begin
   Application.CreateForm(TfrmDashboard, frmDashboard);
   Application.CreateForm(TfrmAlbum, frmAlbum);
   Application.CreateForm(TfrmAlbumEdit, frmAlbumEdit);
+  Application.CreateForm(TresultGridCont, resultGridCont);
   Application.Run;
 end.
 

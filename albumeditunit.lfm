@@ -43,37 +43,37 @@ object frmAlbumEdit: TfrmAlbumEdit
     end
   end
   object edtTitle: TEdit
-    Left = 111
+    Left = 272
     Height = 30
-    Top = 145
+    Top = 104
     Width = 80
     Color = 3028029
     TabOrder = 1
     Text = 'Title'
   end
   object edtArtist: TEdit
-    Left = 112
+    Left = 272
     Height = 30
-    Top = 208
+    Top = 152
     Width = 80
     Color = 3028029
     TabOrder = 2
     Text = 'Artist'
   end
   object edtYear: TEdit
-    Left = 112
+    Left = 272
     Height = 30
-    Top = 264
+    Top = 200
     Width = 80
     Color = 3028029
     TabOrder = 3
     Text = 'Year'
   end
   object lstTracks: TListBox
-    Left = 560
-    Height = 80
-    Top = 145
-    Width = 100
+    Left = 64
+    Height = 232
+    Top = 280
+    Width = 560
     Color = 3028029
     Font.Color = clWhite
     Font.Height = -13
@@ -84,16 +84,16 @@ object frmAlbumEdit: TfrmAlbumEdit
     TopIndex = -1
   end
   object imgCover: TImage
-    Left = 304
+    Left = 64
     Height = 200
-    Top = 88
+    Top = 72
     Width = 200
     Stretch = True
   end
   object btnSave: TButton
-    Left = 205
+    Left = 656
     Height = 25
-    Top = 437
+    Top = 440
     Width = 75
     Caption = 'Save'
     Font.Color = 5552413
@@ -104,9 +104,9 @@ object frmAlbumEdit: TfrmAlbumEdit
     TabOrder = 5
   end
   object btnCancel: TButton
-    Left = 444
+    Left = 656
     Height = 25
-    Top = 436
+    Top = 480
     Width = 75
     Caption = 'Cancel'
     Color = clWhite
