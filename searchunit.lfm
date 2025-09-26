@@ -44,7 +44,7 @@ object resultGridCont: TresultGridCont
       Height = 30
       Top = 8
       Width = 422
-      Color = clSilver
+      Color = clWhite
       Font.Color = 4200215
       Font.Height = -13
       Font.Name = 'Sans'
@@ -99,7 +99,7 @@ object resultGridCont: TresultGridCont
       Height = 30
       Top = 144
       Width = 168
-      Color = clSilver
+      Color = clWhite
       Font.Color = 4200215
       Font.Height = -13
       Font.Name = 'Sans'
@@ -113,7 +113,7 @@ object resultGridCont: TresultGridCont
       Height = 30
       Top = 256
       Width = 168
-      Color = clSilver
+      Color = clWhite
       Font.Color = 4200215
       Font.Height = -13
       Font.Name = 'Sans'
@@ -127,7 +127,7 @@ object resultGridCont: TresultGridCont
       Height = 30
       Top = 200
       Width = 168
-      Color = clSilver
+      Color = clWhite
       Font.Color = 4200215
       Font.Height = -13
       Font.Name = 'Sans'
@@ -167,7 +167,7 @@ object resultGridCont: TresultGridCont
       Height = 30
       Top = 88
       Width = 168
-      Color = clSilver
+      Color = clWhite
       Font.Color = 4200215
       Font.Height = -13
       Font.Name = 'Sans'
@@ -182,8 +182,7 @@ object resultGridCont: TresultGridCont
     Height = 440
     Top = 72
     Width = 488
-    AlternateColor = clWhite
-    Color = 4200215
+    Color = clCream
     Columns = <    
       item
         DropDownRows = 20
@@ -192,18 +191,23 @@ object resultGridCont: TresultGridCont
         Width = 100
       end    
       item
-        Title.Caption = 'Title'
+        Title.Caption = 'Genre'
         Width = 100
       end    
       item
-        Title.Caption = 'Title'
+        Title.Caption = 'Artist'
         Width = 100
       end    
       item
-        Title.Caption = 'Title'
+        Title.Caption = 'Year'
         Width = 100
       end>
+    FixedColor = 7356999
     RowCount = 17
     TabOrder = 2
+    TitleFont.Color = 10078208
+    TitleFont.Height = -15
+    TitleFont.Name = 'Sans'
+    TitleFont.Style = [fsBold]
   end
 end

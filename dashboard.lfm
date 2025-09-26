@@ -7,6 +7,7 @@ object frmDashboard: TfrmDashboard
   ClientWidth = 783
   Color = clBlack
   Font.Color = clBlack
+  LCLVersion = '4.0.0.4'
   object pnlSidebar: TPanel
     Left = 0
     Height = 567

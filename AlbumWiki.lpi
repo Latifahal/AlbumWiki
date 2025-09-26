@@ -95,6 +95,19 @@
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="SearchUnit"/>
       </Unit>
+      <Unit>
+        <Filename Value="dbmoduleunit.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="DBModuleUnit"/>
+      </Unit>
+      <Unit>
+        <Filename Value="db_schema.sql"/>
+        <IsPartOfProject Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="db_seed.sql"/>
+        <IsPartOfProject Value="True"/>
+      </Unit>
     </Units>
   </ProjectOptions>
   <CompilerOptions>

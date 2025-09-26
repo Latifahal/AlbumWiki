@@ -13,7 +13,6 @@ object frmLogin: TfrmLogin
   Font.Name = 'Sans'
   Font.Style = [fsBold]
   Position = poScreenCenter
-  LCLVersion = '4.0.0.4'
   object lblTitle: TLabel
     Left = 0
     Height = 27
@@ -84,6 +83,7 @@ object frmLogin: TfrmLogin
     Font.Style = [fsBold]
     ParentFont = False
     TabOrder = 2
+    OnClick = btnLoginClick
   end
   object btnSignup: TButton
     Left = 168
@@ -98,19 +98,6 @@ object frmLogin: TfrmLogin
     Font.Style = [fsBold]
     ParentFont = False
     TabOrder = 3
-  end
-  object IBConnection1: TIBConnection
-    Connected = False
-    LoginPrompt = False
-    KeepConnection = False
-    CheckTransactionParams = False
-    UseConnectionCharSetIfNone = False
-    Left = 360
-    Top = 216
-  end
-  object SQLTransaction1: TSQLTransaction
-    Active = False
-    Left = 360
-    Top = 264
+    OnClick = frmSignup
   end
 end
