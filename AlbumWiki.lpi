@@ -144,6 +144,9 @@
       <Item>
         <Name Value="EReadError"/>
       </Item>
+      <Item>
+        <Name Value="EDatabaseError"/>
+      </Item>
     </Exceptions>
   </Debugging>
 </CONFIG>

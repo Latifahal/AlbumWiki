@@ -5,7 +5,7 @@ unit DBModuleUnit;
 interface
 
 uses
-  Classes, SysUtils, IBConnection, SQLDB;
+  Classes, SysUtils, IBConnection, SQLDB, Dialogs;
 
 var
   IBConn: TIBConnection;
@@ -17,26 +17,28 @@ implementation
 
 procedure InitDatabase;
 begin
-  IBConn   := TIBConnection.Create(nil);
-  SQLTrans := TSQLTransaction.Create(nil);
+  if not Assigned(IBConn) then
+    IBConn := TIBConnection.Create(nil);
 
-  IBConn.LoginPrompt  := False;          // disable popup login
-  IBConn.DatabaseName := '/home/lalbrecht/Dokumente/First30Days/Album Wiki Project/AlbumWiki.fdb';
-  // IBConn.HostName     := '192.168.178.114';
+  if not Assigned(SQLTrans) then
+    SQLTrans := TSQLTransaction.Create(nil);
+
+  IBConn.LoginPrompt  := False;
+  IBConn.DatabaseName := 'C:\Users\latif\Documents\AlbumWiki\wikiAlbum.fdb';
   IBConn.HostName     := 'localhost';
   IBConn.UserName     := 'SYSDBA';
   IBConn.Password     := 'slu01';
   IBConn.Transaction  := SQLTrans;
 
-  SQLTrans.DataBase   := IBConn;
+  SQLTrans.DataBase := IBConn;
 
   try
-    IBConn.Connected  := True;
-    SQLTrans.StartTransaction;
-    WriteLn('Database connected successfully!');
+    IBConn.Connected := True;
+    if not SQLTrans.Active then
+      SQLTrans.StartTransaction;
   except
     on E: Exception do
-      WriteLn('Database connection failed: ', E.Message);
+      ShowMessage('Database connection failed: ' + E.Message);
   end;
 end;
 

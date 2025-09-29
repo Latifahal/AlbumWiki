@@ -10,7 +10,7 @@ uses
   athreads,
   {$ENDIF}
   Interfaces, Forms, tachartlazaruspkg, LoginUnit, SignupUnit, Dashboard,
-  SettingsUnit, AlbumUnit, AlbumEditUnit, SearchUnit;
+  SettingsUnit, AlbumUnit, AlbumEditUnit, SearchUnit, DBModuleUnit;
 
 {$R *.res}
 

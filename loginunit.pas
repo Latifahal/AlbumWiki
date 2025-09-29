@@ -11,16 +11,16 @@ uses
 type
   { TfrmLogin }
   TfrmLogin = class(TForm)
-    btnLogin:    TButton;
-    btnSignup:   TButton;
+    btnLogin: TButton;
+    btnSignup: TButton;
     edtUsername: TEdit;
     edtPassword: TEdit;
-    lblTitle:    TLabel;
+    lblTitle: TLabel;
     lblUsername: TLabel;
     lblPassword: TLabel;
     procedure btnLoginClick(Sender: TObject);
-    procedure FormCreate(Sender:    TObject);
-    procedure frmSignup(Sender:     TObject);
+    procedure FormCreate(Sender: TObject);
+    procedure frmSignup(Sender: TObject);
   private
     function TryLogin(const AUser, APass: string): Boolean;
   public
@@ -33,20 +33,25 @@ implementation
 
 {$R *.lfm}
 
-procedure TfrmLogin.FormCreate(Sender:    TObject);
+procedure TfrmLogin.FormCreate(Sender: TObject);
 begin
-  InitDatabase; // DBModuleUnit takes care of IBConn + SQLTrans
+  // Initialize DB connection safely
+  InitDatabase;
+
+  if not Assigned(IBConn) then
+    ShowMessage('Database object not created!')
+  else if not IBConn.Connected then
+    ShowMessage('Database not connected!');
 end;
 
-procedure TfrmLogin.frmSignup(Sender:     TObject);
+procedure TfrmLogin.frmSignup(Sender: TObject);
 begin
-  ShowMessage('clicked!');
+  ShowMessage('Signup button clicked!');
 end;
 
 procedure TfrmLogin.btnLoginClick(Sender: TObject);
 begin
-  ShowMessage('clicked!');
-  if TryLogin(edtUsername.Text, edtPassword.Text) then
+  if TryLogin(Trim(edtUsername.Text), Trim(edtPassword.Text)) then
     ShowMessage('Login successful!')
   else
     ShowMessage('Invalid username or password.');
@@ -57,17 +62,35 @@ var
   Query: TSQLQuery;
 begin
   Result := False;
+
+  // Check database connection
+  if not Assigned(IBConn) then
+  begin
+    ShowMessage('Database connection object is missing!');
+    Exit;
+  end;
+
+  if not IBConn.Connected then
+  begin
+    ShowMessage('Database is not connected!');
+    Exit;
+  end;
+
   Query := TSQLQuery.Create(nil);
   try
     Query.DataBase := IBConn;
     Query.Transaction := SQLTrans;
-    Query.SQL.Text :=
-      'SELECT COUNT(*) AS CNT FROM USERS WHERE USERNAME = :U AND PASSWORD = :P';
+    Query.SQL.Text := 'SELECT COUNT(*) AS CNT FROM USERS WHERE USERNAME = :U AND PASSWORD = :P';
     Query.Params.ParamByName('U').AsString := AUser;
     Query.Params.ParamByName('P').AsString := APass;
-    Query.Open;
 
-    Result := Query.FieldByName('CNT').AsInteger > 0;
+    try
+      Query.Open;
+      Result := Query.FieldByName('CNT').AsInteger > 0;
+    except
+      on E: Exception do
+        ShowMessage('Database query error: ' + E.Message);
+    end;
 
     Query.Close;
   finally

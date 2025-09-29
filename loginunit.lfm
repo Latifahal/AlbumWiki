@@ -1,19 +1,20 @@
 object frmLogin: TfrmLogin
   Cursor = crDrag
   Left = 298
-  Height = 300
+  Height = 450
   Top = 31
-  Width = 400
+  Width = 600
   Caption = 'Login'
-  ClientHeight = 300
-  ClientWidth = 400
+  ClientHeight = 450
+  ClientWidth = 600
   Color = 5587466
+  DesignTimePPI = 144
   Font.Color = 16775366
-  Font.Height = -13
+  Font.Height = -20
   Font.Name = 'Sans'
   Font.Style = [fsBold]
   Position = poScreenCenter
-  LCLVersion = '4.0.0.4'
+  LCLVersion = '4.2.0.0'
   object lblTitle: TLabel
     Left = 0
     Height = 27
@@ -24,62 +25,62 @@ object frmLogin: TfrmLogin
     Caption = 'AlbumWiki Login'
     Color = 5587466
     Font.Color = 16775366
-    Font.Height = -19
+    Font.Height = -29
     Font.Name = 'Noto Serif Devanagari'
     ParentColor = False
     ParentFont = False
   end
   object lblUsername: TLabel
-    Left = 104
+    Left = 156
     Height = 18
-    Top = 64
+    Top = 96
     Width = 72
     Caption = 'Username:'
     Font.Color = 16775366
-    Font.Height = -13
+    Font.Height = -20
     Font.Name = 'Sans'
     Font.Style = [fsBold]
     ParentFont = False
   end
   object lblPassword: TLabel
-    Left = 104
+    Left = 156
     Height = 18
-    Top = 136
+    Top = 204
     Width = 65
     Caption = 'Password:'
   end
   object edtUsername: TEdit
-    Left = 104
+    Left = 156
     Height = 30
-    Top = 88
-    Width = 200
+    Top = 132
+    Width = 300
     Font.Color = 5587466
-    Font.Height = -13
+    Font.Height = -20
     Font.Name = 'Sans'
     Font.Style = [fsBold]
     ParentFont = False
     TabOrder = 0
   end
   object edtPassword: TEdit
-    Left = 104
+    Left = 156
     Height = 30
-    Top = 160
-    Width = 200
+    Top = 240
+    Width = 300
     Font.Color = 5587466
-    Font.Height = -13
+    Font.Height = -20
     Font.Name = 'Sans'
     Font.Style = [fsBold]
     ParentFont = False
     TabOrder = 1
   end
   object btnLogin: TButton
-    Left = 168
-    Height = 25
-    Top = 208
-    Width = 75
+    Left = 252
+    Height = 38
+    Top = 312
+    Width = 112
     Caption = 'Login'
     Font.Color = 5587466
-    Font.Height = -13
+    Font.Height = -20
     Font.Name = 'Sans'
     Font.Style = [fsBold]
     ParentFont = False
@@ -87,14 +88,14 @@ object frmLogin: TfrmLogin
     OnClick = btnLoginClick
   end
   object btnSignup: TButton
-    Left = 168
-    Height = 25
-    Top = 248
-    Width = 75
+    Left = 252
+    Height = 38
+    Top = 372
+    Width = 112
     Caption = 'Signup'
     Color = 8876612
     Font.Color = 1663738
-    Font.Height = -13
+    Font.Height = -20
     Font.Name = 'Sans'
     Font.Style = [fsBold]
     ParentFont = False
